@@ -1,9 +1,11 @@
 const Maze = require('../models/maze');
+const helperfunctions = require('../helper');
 
 async function getOne (req, res) {
   try {
     const mazeObj = await Maze.findOne({index:0});
     const mazeArray = JSON.parse(mazeObj.maze);
+    const userInstructions = req.body.instructions;
     res.send(mazeArray);
   } catch (e) {
     console.log('Error', e); // eslint-disable-line no-console
