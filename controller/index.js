@@ -6,7 +6,7 @@ async function getOne (req, res) {
     const mazeObj = await Maze.findOne({index:0});
     const mazeArray = JSON.parse(mazeObj.maze);
     const userInstructions = req.body.instructions;
-    const output = helperfunctions.mazeSolver(mazeArray, userInstructions)
+    const output = helperfunctions.mazeSolver(mazeArray, userInstructions);
     res.send(output);
   } catch (e) {
     console.log('Error', e); // eslint-disable-line no-console

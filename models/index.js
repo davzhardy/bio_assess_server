@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
-const dbUrl = 'mongodb://localhost:27017/';
-const dbName = 'biogen_assessment';
+const dbUrl = process.env.DBURL;
+const dbName = process.env.DBNAME;
 
 mongoose.connect(`${dbUrl}${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, });
 
