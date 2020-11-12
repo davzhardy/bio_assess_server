@@ -43,7 +43,7 @@ const data = [
 async function clearDB () {
   try {
     await Maze.deleteMany({}, function(){
-    console.log('database cleared')
+    console.log('database cleared');
   });
   } catch (e) {
     console.log('Error', e);
