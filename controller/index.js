@@ -17,6 +17,7 @@ async function getOne (req, res) {
 async function postOne (req, res) {
   try {
     const layout = JSON.stringify(req.body.layout)
+    console.log(layout)
     const newMaze = await Maze.create({
       index: 0,
       maze: layout,
