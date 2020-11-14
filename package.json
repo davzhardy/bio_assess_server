@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",  
+    "dev": "(npm run seed) & npm run start",
     "seed": "node --require dotenv/config seeder.js",
     "start": "node --require dotenv/config index.js"
   },

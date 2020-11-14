@@ -25,9 +25,9 @@ const data = [
   {
     "layout":[
       ["-", "-", "-", "O", "-", "-", "-", "-", "-", "O"], 
-      ["-", "O", "-", "-", "-", "O", "-", "D", "-", "-"], 
+      ["-", "O", "-", "-", "-", "O", "-", "-", "-", "-"], 
       ["-", "-", "-", "-", "O", "-", "-", "O", "-", "-"], 
-      ["-", "O", "-", "O", "-", "-", "-", "-", "-", "-"], 
+      ["D", "O", "-", "O", "-", "-", "-", "-", "-", "-"], 
       ["-", "-", "-", "-", "-", "O", "-", "O", "-", "-"], 
       ["F", "-", "-", "O", "-", "-", "-", "-", "-", "O"], 
       ["-", "-", "O", "-", "-", "-", "-", "-", "-", "-"], 
@@ -58,7 +58,7 @@ async function seedDB () {
       });
     }));
     console.log('database seeded');
-    mongoose.disconnect('Disconnected from MongoDB database');
+    mongoose.disconnect(console.log('Disconnected from MongoDB database'));
   } catch (e) {
     console.log('Error', e);
   }
