@@ -8,16 +8,22 @@ DBNAME=<nameForTheGamesDB>
 DBURL=<yourLocalMongoDBURL>
 ```
 
-Seed the database with the game array and then start the server by running 
+If you want to use the server with the front-end, aeed the database with the game array and then start the server by running: 
 
 ```
-npm run dev
+npm run test
 ```
 
-If you have already got a database with a maze you can just run 
+If you have already got a database with a maze you can just run: 
 
 ```
 npm run start
+```
+
+If you want to make changes to the server and amend the code (this will use nodemon):
+
+```
+npm run dev
 ```
 
 
