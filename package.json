@@ -4,8 +4,9 @@
   "description": "server for biogen assessment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node seeder.js"
+    "test": "echo \"Error: no test specified\" && exit 1",  
+    "seed": "node --require dotenv/config seeder.js",
+    "start": "node --require dotenv/config index.js"
   },
   "repository": {
     "type": "git",

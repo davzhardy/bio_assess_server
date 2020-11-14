@@ -1,6 +1,5 @@
 const Maze = require('./models/maze');
 const mongoose = require('mongoose');
-require('dotenv').config();
 
 const dbUrl = process.env.DBURL;
 const dbName = process.env.DBNAME;
