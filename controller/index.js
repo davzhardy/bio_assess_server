@@ -5,7 +5,7 @@ async function getOne (req, res) {
   try {
     const mazeObj = await Maze.findOne({index:0});
     const mazeArray = JSON.parse(mazeObj.maze);
-    const userInstructions = req.body.instructions;
+    const userInstructions = req.params.userInput;
     const output = helperfunctions.mazeSolver(mazeArray, userInstructions);
     res.status(200);
     res.send(JSON.stringify(output));
