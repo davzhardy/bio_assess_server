@@ -4,9 +4,9 @@
   "description": "server for biogen assessment",
   "main": "index.js",
   "scripts": {
-    "dev": "(npm run seed) && nodemon --require dotenv/config index.js",
+    "dev": "(npm run seed) && nodemon --require dotenv/config index.js",  
     "test": "(npm run seed) && npm run start",
-    "seed": "node --require dotenv/config seeder.js",
+    "seed": "node --require dotenv/config seeding/seeder.js",
     "start": "node --require dotenv/config index.js"
   },
   "repository": {
@@ -26,7 +26,6 @@
     "mongoose": "^5.10.13"
   },
   "devDependencies": {
-    "eslint": "^7.13.0",
     "nodemon": "^2.0.6"
   }
 }
