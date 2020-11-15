@@ -37,13 +37,13 @@ const data = [
     ],
     "index": 1
   },
-]
+];
 
 async function clearDB () {
   try {
-    await Maze.deleteMany({}, function(){
-    console.log('database cleared');
-  });
+    await Maze.deleteMany({}, function () {
+      console.log('database cleared');
+    });
   } catch (e) {
     console.log('Error', e);
   }
@@ -64,7 +64,7 @@ async function seedDB () {
   }
 }
 
-async function clearAndSeed() {
+async function clearAndSeed () {
   await clearDB();
   seedDB();
 }
